@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(to right, rgb(101, 153, 153), rgb(244, 121, 31));
+  font-size: 10px;
+  font-family: 'Fira Sans', Consolas, Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+body,
+h1,
+h2,
+p,
+a,
+input {
+  color: #bce954;
+  text-decoration: none;
+}
+
+header {
+  width: 100%;
+  padding: 1.6rem;
+  text-align: right;
+  background: #333;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+header a {
+  margin-left: 1rem;
+  font-size: 1.1rem;
+  padding: 0.5rem;
+  border-bottom: 2px solid #252320;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+header a:hover {
+  background: #252320;
+  color: #aaa;
+}
+
+.content {
+  max-width: 750px;
+  margin: 4rem auto;
+}
+
+h1 {
+  font-size: 2.6rem;
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.lang-list li {
+  margin: 1rem auto;
+  padding: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #493d26;
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+  list-style-type: none;
+}
+
+.text {
+  font-size: 1.5rem;
+}
+
+.votes {
+  font-size: 1.8rem;
+}
+
+.upvote {
+  margin: 0 0.5rem;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.upvote:active {
+  background: rgba(188, 233, 84, 0.4);
+}
+
+/*  auth styles */
+.auth {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: linear-gradient(to right, rgb(16, 141, 199), rgb(239, 142, 56));
+  z-index: 1;
+  display: none;
+}
+
+.auth.open {
+  display: block;
+}
+
+.auth .modal div {
+  font-size: 1.1rem;
+}
+
+.auth a {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.auth .modal {
+  display: none;
+}
+
+.auth .modal.active {
+  display: block;
+}
+
+/*  modal styles  */
+
+.modal {
+  width: 30rem;
+  margin: 10rem auto;
+  padding: 3rem;
+  text-align: center;
+  background: #5e4e31;
+  border-radius: 1rem;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.lang-form {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+}
+
+.lang-form.open {
+  display: block;
+}
+
+.modal h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.modal form {
+  margin: 0 auto;
+}
+
+.modal input {
+  width: 100%;
+  display: block;
+  margin: 0.8rem 0;
+  padding: 0.7rem 0.2rem;
+  font-size: 1.1rem;
+  font-family: inherit;
+  color: #888;
+  border-width: 0 0 2px 0;
+  outline: none;
+}
+
+button {
+  width: 10rem;
+  margin: 1rem 0;
+  padding: 0.7rem 2rem;
+  color: inherit;
+  background: rgb(244, 121, 31);
+  font-size: 1.1rem;
+  font-weight: bold;
+  font-family: inherit;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+}
