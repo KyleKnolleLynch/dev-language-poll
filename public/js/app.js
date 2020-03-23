@@ -17,7 +17,7 @@ langForm.addEventListener('submit', e => {
 
   const addLanguage = firebase.functions().httpsCallable('addLanguage');
   addLanguage({
-    text: langForm.language.value,
+    text: langForm.language.value
   })
     .then(() => {
       langForm.reset();
@@ -29,3 +29,14 @@ langForm.addEventListener('submit', e => {
       langForm.querySelector('.error').textContent = err.message;
     });
 });
+
+//  notification
+const showNotification = message => {
+  const notiDiv = document.querySelector('.notification');
+  notiDiv.textContent = message;
+  notiDiv.classList.add('active');
+  setTimeout(() => {
+    notiDiv.classList.remove('active');
+    notiDiv.textContent = '';
+  }, 3000);
+};

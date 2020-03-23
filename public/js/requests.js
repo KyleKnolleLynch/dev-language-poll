@@ -3,8 +3,17 @@ var app = new Vue({
   data: {
     languages: []
   },
+  methods: {
+    upvoteLanguage(id) {
+      const upvote = firebase.functions().httpsCallable('upvote');
+      upvote({ id })
+      .catch(err => {
+        showNotification(err.message);
+      })
+    }
+  },
   mounted() {
-    const ref = firebase.firestore().collection('languages');
+    const ref = firebase.firestore().collection('languages').orderBy('upvotes', 'desc');
 
     ref.onSnapshot(snapshot => {
       let languages = [];
@@ -15,3 +24,5 @@ var app = new Vue({
     });
   }
 });
+
+

@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <div class="notification"></div>
+
     <!--  auth modals-->
     <div class="auth open">
       <div class="modal">
@@ -64,7 +66,11 @@
           <span class="text">{{language.text}}</span>
           <div>
             <span class="votes">{{language.upvotes}}</span>
-            <i class="material-icons upvote">arrow_upward</i>
+            <i
+              class="material-icons upvote"
+              v-on:click="upvoteLanguage(language.id)"
+              >arrow_upward</i
+            >
           </div>
         </li>
       </ul>

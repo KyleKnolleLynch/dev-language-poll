@@ -180,3 +180,23 @@ button {
   outline: none;
   cursor: pointer;
 }
+
+.notification {
+  width: 20rem;
+  padding: 2rem;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: -100% auto 0;
+  font-size: 1.2rem;
+  text-align: center;
+  background: red;
+  border-radius: 0 0 5px 5px;
+  color: #fff;
+  transition: all 0.4s;
+}
+
+.notification.active {
+  margin-top: 0;
+}
